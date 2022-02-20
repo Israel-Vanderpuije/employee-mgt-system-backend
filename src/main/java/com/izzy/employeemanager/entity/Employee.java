@@ -4,27 +4,28 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.sql.Date;
 
-@Entity
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "employee")
 public class Employee {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "employee_id")
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+
     private Long employeeId;
 
-    @Column(name = "first_name")
-    private String firstName;
+    private String firstName, lastName, gender, citizenship, email, address, phoneNumber, maritalStatus, socialSecurity, team;
 
-    @Column(name = "last_name")
-    private String lastName;
+    private Long age;
 
-    private String email;
+    private Date dateOfBirth, startDate;
 
     public Employee(String firstName, String lastName, String email){
         this.firstName = firstName;

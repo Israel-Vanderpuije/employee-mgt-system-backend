@@ -1,22 +1,44 @@
 package com.izzy.employeemanager.controller;
 
 import com.izzy.employeemanager.entity.Employee;
-import com.izzy.employeemanager.repository.EmployeeRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.izzy.employeemanager.service.EmployeeService;
+import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1")
 public class EmployeeController {
 
-    @Autowired
-    private EmployeeRepository employeeRepository;
+    private final EmployeeService employeeService;
+
+    public EmployeeController(EmployeeService employeeService) {
+        this.employeeService = employeeService;
+    }
 
     @GetMapping("/employees")
     public List<Employee> getAllEmployees(){
-        return employeeRepository.findAll();
+        return employeeService.findAll();
     }
+
+    @PostMapping("/employee")
+    public Employee addEmployee(@RequestBody Employee employee){
+        return employeeService.addEmployee(employee);
+    }
+
+    @GetMapping("/find")
+    public Optional<Employee> findById(@RequestParam("id") Long id){
+        return employeeService.findById(id);
+    }
+
+    @PutMapping("update")
+    public Employee updateEmployee(@RequestBody Employee employee){
+        return employeeService.updateEmployee(employee);
+    }
+
+    @DeleteMapping("/delete")
+    public void deleteEmployee(@RequestParam("id") Long id){
+        employeeService.deleteById(id);
+    }
+
 }
