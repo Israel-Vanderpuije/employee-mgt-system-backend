@@ -15,11 +15,11 @@ public class EmployeeRowMapper implements RowMapper<Employee> {
                 rs.getString("citizenship"),
                 rs.getString("email"),
                 rs.getString("address"),
-                rs.getString("phone_number"),
                 rs.getString("marital_status"),
                 rs.getString("social_security"),
-                rs.getString("team"),
+                rs.getString("project"),
                 rs.getLong("age"),
+                rs.getLong("phone_number"),
                 rs.getDate("date_of_birth"),
                 rs.getDate("start_date")
         );
