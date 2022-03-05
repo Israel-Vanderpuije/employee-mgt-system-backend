@@ -16,9 +16,9 @@ CREATE TABLE employee (
   citizenship VARCHAR(255),
   address VARCHAR(255),
   social_security VARCHAR(255),
-  team VARCHAR(255),
+  project VARCHAR(255),
   marital_status VARCHAR(255),
-  phone_number INT,
+  phone_number VARCHAR(255),
   age INT,
   start_date DATE,
   date_of_birth DATE
