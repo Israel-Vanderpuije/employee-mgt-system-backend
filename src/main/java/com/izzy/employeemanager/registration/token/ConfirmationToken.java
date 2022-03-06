@@ -4,14 +4,16 @@ import com.izzy.employeemanager.appuser.AppUser;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
+@Entity
 public class ConfirmationToken {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String token;
     private LocalDateTime createdAt, expiresAt, confirmedAt;
