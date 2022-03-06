@@ -1,4 +1,4 @@
-package com.izzy.employeemanager.entity;
+package com.izzy.employeemanager.employee;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,9 +12,9 @@ public class Employee {
 
     private Long employeeId;
 
-    private String firstName, lastName, gender, citizenship, email, address, maritalStatus, socialSecurity, project;
+    private String firstName, lastName, gender, citizenship, email, phoneNumber, address, maritalStatus, socialSecurity, project;
 
-    private Long age, phoneNumber;
+    private Long age;
 
     private Date dateOfBirth, startDate;
 

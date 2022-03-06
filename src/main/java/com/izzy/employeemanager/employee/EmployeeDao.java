@@ -1,6 +1,6 @@
-package com.izzy.employeemanager.repository;
+package com.izzy.employeemanager.employee;
 
-import com.izzy.employeemanager.entity.Employee;
+import com.izzy.employeemanager.employee.Employee;
 import java.util.List;
 import java.util.Optional;
 

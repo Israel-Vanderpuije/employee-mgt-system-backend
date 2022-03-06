@@ -1,7 +1,8 @@
-package com.izzy.employeemanager.repository;
+package com.izzy.employeemanager.employee;
 
 import com.izzy.employeemanager.EmployeeRowMapper;
-import com.izzy.employeemanager.entity.Employee;
+import com.izzy.employeemanager.employee.Employee;
+import com.izzy.employeemanager.employee.EmployeeDao;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import java.util.List;

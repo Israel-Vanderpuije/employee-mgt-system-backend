@@ -1,7 +1,5 @@
-package com.izzy.employeemanager.service;
+package com.izzy.employeemanager.employee;
 
-import com.izzy.employeemanager.entity.Employee;
-import com.izzy.employeemanager.repository.EmployeeDaoImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;

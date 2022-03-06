@@ -18,7 +18,7 @@ public class RegistrationService {
         if (!isValidEmail){
             throw new IllegalStateException("email not valid");
         }
-        return appUserService.singUpUser(
+        return appUserService.signUpUser(
                 new AppUser(
                         request.getFirstName(),
                         request.getLastName(),

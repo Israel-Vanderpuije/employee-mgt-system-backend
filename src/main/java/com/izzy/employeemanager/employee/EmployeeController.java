@@ -1,7 +1,5 @@
-package com.izzy.employeemanager.controller;
+package com.izzy.employeemanager.employee;
 
-import com.izzy.employeemanager.entity.Employee;
-import com.izzy.employeemanager.service.EmployeeService;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;

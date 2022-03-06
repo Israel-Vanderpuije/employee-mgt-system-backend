@@ -1,6 +1,6 @@
 package com.izzy.employeemanager;
 
-import com.izzy.employeemanager.entity.Employee;
+import com.izzy.employeemanager.employee.Employee;
 import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,12 +14,12 @@ public class EmployeeRowMapper implements RowMapper<Employee> {
                 rs.getString("gender"),
                 rs.getString("citizenship"),
                 rs.getString("email"),
+                rs.getString("phone_number"),
                 rs.getString("address"),
                 rs.getString("marital_status"),
                 rs.getString("social_security"),
                 rs.getString("project"),
                 rs.getLong("age"),
-                rs.getLong("phone_number"),
                 rs.getDate("date_of_birth"),
                 rs.getDate("start_date")
         );
